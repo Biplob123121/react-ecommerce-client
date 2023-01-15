@@ -1,11 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Home from "./pages/Home/Home";
+import NotFound from "./pages/Shared/NotFound";
+
 
 function App() {
+
+  
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "*",
+      element: <NotFound />,
+    },
+  ]);
+
   return (
-    <h1 className="text-3xl font-bold underline text-center">
-      Hello world!
-    </h1>
+    <RouterProvider router={router} />
   );
 }
 
