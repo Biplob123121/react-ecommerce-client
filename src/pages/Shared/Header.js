@@ -22,7 +22,7 @@ function Header() {
                 <NavLink to="/">
                     <h1 className='pb-6 md:pb-0 pl-2 md:pl-0 text-3xl font-bold'>React Ecommerce</h1>
                 </NavLink>
-                <div className={`flex flex-col md:flex-row md:items-center left-0 w-full md:w-auto bg-gray-700 absolute md:static ${open? 'top-18':'top-[-490px]'}`}>
+                <div className={`flex flex-col md:flex-row md:items-center left-0 w-full md:w-auto bg-gray-700 z-30 absolute md:static ${open? 'top-18':'top-[-490px]'}`}>
                     {
                         links.map((item, index) => {
                             return <NavLink to={item.link} key={index}  style={({ isActive }) =>
