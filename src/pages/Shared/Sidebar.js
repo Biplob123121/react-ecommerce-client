@@ -41,7 +41,7 @@ function Sidebar() {
                     </div>
                 </div>
             </div>
-            <div>
+            <div className='p-4'>
                 <Outlet />
             </div>
         </section>
