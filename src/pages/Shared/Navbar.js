@@ -18,12 +18,12 @@ function Navbar() {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className='bg-gray-700 w-full'>
-            <nav className='flex justify-between items-center px-6 py-4 md:pb-4 pb-8 md:pb-0 text-gray-100 relative'>
+        <header className='bg-gray-700 w-full sticky top-0'>
+            <nav className='flex justify-between items-center px-6 py-4 md:pb-4 pb-8  text-gray-100 relative'>
                 <NavLink onClick={() => setOpen(!open)} to={"/"}>
                     <h1 className='text-3xl font-bold'>React Ecommerce</h1>
                 </NavLink>
-                <div className={`flex flex-col items-center md:flex-row left-0 w-full md:w-auto bg-gray-700 absolute md:static duration-500 ${open ? 'top-20' : 'top-[-490px]'}`}>
+                <div className={`flex flex-col items-center md:flex-row left-0 w-full md:w-auto z-40 bg-gray-700 absolute md:static duration-500 ${open ? 'top-20' : 'top-[-490px]'}`}>
                     {
                         navItems?.map((item, i) =>
                             <NavLink onClick={() => setOpen(!open)} to={item.link} key={i} className="px-4 py-1 hover:bg-slate-500 hover:text-orange-500 rounded-md font-semibold uppercase" style={({ isActive }) => isActive ? activeStyle : undefined}>
